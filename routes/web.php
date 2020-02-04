@@ -17,3 +17,6 @@
 Route::get('/', function (){
     return view('main.index');
 });
+
+
+Route::get('/blueming/admin/', 'ImagesController@index');
