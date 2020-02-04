@@ -6,6 +6,16 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";
 
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+// @import "~font-awesome/scss/font-awesome";
+
+@tailwind utilities;
+
+// @import url("https://getbootstrap.com/docs/4.4/examples/carousel/carousel.css");
+
+// @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+
+// @import url('https://getbootstrap.com/docs/4.0/examples/sticky-footer/sticky-footer.css');
