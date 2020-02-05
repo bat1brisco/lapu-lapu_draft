@@ -80,6 +80,7 @@
           @foreach ($images as $key => $image)
           <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{$key == 0 ? 'active' : ''}}"></li>
           @endforeach
+
         </ol>
         <div class="carousel-inner">
           @foreach ($images as $key => $item)
