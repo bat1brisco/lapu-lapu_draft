@@ -18,3 +18,4 @@ Route::get('admin/', 'HomeController@index')->name('home');
 Route::get('admin/images', 'HomeController@images')->name('admin.images');
 
 Route::post('upload', 'ImagesController@upload')->name('upload');
+Route::get('delete/{id}', 'ImagesController@delete')->name('image.delete');

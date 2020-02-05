@@ -71,8 +71,20 @@
 
     <main role="main">
       <div class="container-fluid mt-2">
-        <div>
-          
+        <div style="background-color:blue" class="mx-32">
+          <div class="text-center p-1">
+            <a class="navbar-brand text-light" href="#">Know Lapu-Lapu City</a> 
+
+            <a class="navbar-brand text-light" href="#">Online Services</a>
+
+            <a class="navbar-brand text-light" href="#">Departments</a>
+
+            <a class="navbar-brand text-light" href="#">Transparency</a>
+
+            <a class="navbar-brand text-light" href="#">Events</a>
+            
+            <a class="navbar-brand text-light" href="#">Contact US</a>
+          </div>
         </div>
         <div id="myCarousel" class="carousel slide px-32" data-ride="carousel">
           <ol class="carousel-indicators">

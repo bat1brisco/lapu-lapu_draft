@@ -23,8 +23,19 @@ class ImagesController extends Controller
             'file_type' => 'test',
             'category' => $request->input('category')
         ]);
+    }
 
+    public function delete($id)
+    {
+        $file = Image::find($id);
+        // $response = Storage::delete('localhost:8000/storage/' . $file->category . '/' . $file->file_name);
 
+        // dd('public/storage/' . $file->category . '/' . $file->file_name);
+        // dd(public_path('storage\\' . $file->category . $file->file_name));
+        // dd($response);
+        $res = Storage::url('public/' . $file->category . '/' . $file->file_name);
+        $response = Storage::get(url('storage/' . $file->category . '/' . $file->file_name));
 
+        dd($response);
     }
 }

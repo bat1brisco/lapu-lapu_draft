@@ -24,17 +24,22 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Images</th>
-                            <th>File Name</th>
-                            <th>Category</th>
+                            <th class="text-center">Images</th>
+                            <th class="text-center">File Name</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($images as $image)
                             <tr>
-                                <td><img src="{{url('storage/' . $image->category . '/' . $image->file_name)}}" alt="{{ $image->file_name }}" height="64" width="64"></td>
-                                <td>{{ $image->file_name}}</td>
-                                <td>{{ $image->category}}</td>
+                                <td class="text-center"><img src="{{url('storage/' . $image->category . '/' . $image->file_name)}}" alt="{{ $image->file_name }}" height="64" width="64"></td>
+                                <td class="text-center">{{ $image->file_name}}</td>
+                                <td class="text-center">{{ $image->category}}</td>
+                                <td class="text-center">
+                                    <a href="{{ route('image.delete', $image->id) }}"><button class="btn btn-danger btn-sm">Delete</button></a>
+                                    <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> Edit</button>
+                                </td>
                             </tr>                            
                         @endforeach
                     </tbody>
