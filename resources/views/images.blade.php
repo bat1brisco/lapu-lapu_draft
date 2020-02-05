@@ -42,20 +42,22 @@
                 </table>
             </div>
             <div id="menu1" class="tab-pane fade">
-                <form action="{{ route('upload') }}" enctype="multipart/form-data" method="POST">
+                <form action="{{ route('upload') }}" enctype="multipart/form-data" method="POST" class="m-5">
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <input type="file" name="file_name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" name="category" id="">
-                            <option value="Banner">Banner</option>
-                            <option value="Background">Background</option>
-                            <option value="Slider">Slider</option>
-                            <option value="Others">Others</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Upload</button>
+                  
+                        <div class="form-group">
+                            <input type="file" name="file_name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="category" id="">
+                                <option value="Banner">Banner</option>
+                                <option value="Background">Background</option>
+                                <option value="Slider">Slider</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                
                 </form>
             </div>
             <div id="menu2" class="tab-pane fade">

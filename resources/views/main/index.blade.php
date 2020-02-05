@@ -31,16 +31,13 @@
     </head>
   <body>
     <header>
-
-
       <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top text-center">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="content-start">
-            <div class="text-center p-2">
+            <div class="text-center p-1">
               <a class="navbar-brand text-light" href="#">Know Lapu-Lapu City</a> 
 
               <a class="navbar-brand text-light" href="#">Online Services</a>
@@ -55,7 +52,6 @@
             </div>
           </div>
         </nav>
-              
         <div class="mt-4">
             <div class="row">
                 <div class="col-md-4 px-0">
@@ -75,34 +71,34 @@
 
     <main role="main">
       <div class="container-fluid mt-2">
-      <div id="myCarousel" class="carousel slide px-32" data-ride="carousel">
-        <ol class="carousel-indicators">
-          @foreach ($images as $key => $image)
-          <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{$key == 0 ? 'active' : ''}}"></li>
-          @endforeach
-
-        </ol>
-        <div class="carousel-inner">
-          @foreach ($images as $key => $item)
-            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                  <img src="{{url('storage/Banner/' . $item->file_name)}}" alt="">
-            </div>
-          @endforeach
-       
+        <div>
+          
         </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+        <div id="myCarousel" class="carousel slide px-32" data-ride="carousel">
+          <ol class="carousel-indicators">
+            @foreach ($images as $key => $image)
+            <li data-target="#myCarousel" data-slide-to="{{ $key }}" class="{{$key == 0 ? 'active' : ''}}"></li>
+            @endforeach
+          </ol>
+          <div class="carousel-inner">
+            @foreach ($images as $key => $item)
+              <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{url('storage/Banner/' . $item->file_name)}}" alt="">
+              </div>
+            @endforeach
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
       <footer class="h-16 p-4 bg-dark fixed-bottom">
-          <span class="text-center text-light"><p class="no-underline">The offical website of the City Government of Lapu-Lapu City | {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', \Carbon\Carbon::now())->format('l, F d, Y')  }} | <a  href="facebook.com" class="text-decoration-none"><i class="fa fa-facebook"></i> Facebook </a> </p> </span>
-    
+        <span class="text-center text-light"><p class="no-underline">The offical website of the City Government of Lapu-Lapu City | {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', \Carbon\Carbon::now())->format('l, F d, Y')  }} | <a  href="facebook.com" class="text-decoration-none"><i class="fa fa-facebook"></i> Facebook </a> </p> </span>
       </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
