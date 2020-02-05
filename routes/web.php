@@ -14,9 +14,13 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function (){
-    return view('main.index');
-});
+Route::get('/', 'MainController@index')->name('main.index');
 
 
-Route::get('/blueming/admin/', 'ImagesController@index');
+// Route::get('/blueming/admin/', 'ImagesController@index');
+Auth::routes();
+
+Route::get('admin/', 'HomeController@index')->name('home');
+Route::get('admin/images', 'HomeController@images')->name('admin.images');
+
+Route::post('upload', 'ImagesController@upload')->name('upload');
