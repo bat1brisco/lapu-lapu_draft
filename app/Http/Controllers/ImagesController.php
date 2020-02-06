@@ -28,14 +28,14 @@ class ImagesController extends Controller
     public function delete($id)
     {
         $file = Image::find($id);
-        // $response = Storage::delete('localhost:8000/storage/' . $file->category . '/' . $file->file_name);
+        try {
+            unlink('storage/' . $file->category . '/' . $file->file_name);    
+        } catch (\Throwable $th) {
+            return $th;
+        }
+        
+        $file->delete();
 
-        // dd('public/storage/' . $file->category . '/' . $file->file_name);
-        // dd(public_path('storage\\' . $file->category . $file->file_name));
-        // dd($response);
-        $res = Storage::url('public/' . $file->category . '/' . $file->file_name);
-        $response = Storage::get(url('storage/' . $file->category . '/' . $file->file_name));
-
-        dd($response);
+        return redirect()->back();
     }
 }
